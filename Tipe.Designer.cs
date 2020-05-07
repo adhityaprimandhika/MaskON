@@ -35,9 +35,10 @@
             // 
             // btnDonator
             // 
-            this.btnDonator.Location = new System.Drawing.Point(126, 180);
+            this.btnDonator.Location = new System.Drawing.Point(63, 94);
+            this.btnDonator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDonator.Name = "btnDonator";
-            this.btnDonator.Size = new System.Drawing.Size(140, 80);
+            this.btnDonator.Size = new System.Drawing.Size(70, 42);
             this.btnDonator.TabIndex = 0;
             this.btnDonator.Text = "Be a donator";
             this.btnDonator.UseVisualStyleBackColor = true;
@@ -45,11 +46,12 @@
             // 
             // btnRecieve
             // 
-            this.btnRecieve.Location = new System.Drawing.Point(346, 180);
+            this.btnRecieve.Location = new System.Drawing.Point(173, 94);
+            this.btnRecieve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRecieve.Name = "btnRecieve";
-            this.btnRecieve.Size = new System.Drawing.Size(140, 80);
+            this.btnRecieve.Size = new System.Drawing.Size(70, 42);
             this.btnRecieve.TabIndex = 1;
-            this.btnRecieve.Text = "Recieve donation\r\n";
+            this.btnRecieve.Text = "Receive donation\r\n";
             this.btnRecieve.UseVisualStyleBackColor = true;
             this.btnRecieve.Click += new System.EventHandler(this.btnRecieve_Click);
             // 
@@ -57,20 +59,22 @@
             // 
             this.textPertanyaan.AutoSize = true;
             this.textPertanyaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPertanyaan.Location = new System.Drawing.Point(107, 86);
+            this.textPertanyaan.Location = new System.Drawing.Point(54, 45);
+            this.textPertanyaan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textPertanyaan.Name = "textPertanyaan";
-            this.textPertanyaan.Size = new System.Drawing.Size(400, 37);
+            this.textPertanyaan.Size = new System.Drawing.Size(197, 20);
             this.textPertanyaan.TabIndex = 2;
             this.textPertanyaan.Text = "What would you like to do?";
             // 
             // Tipe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 326);
+            this.ClientSize = new System.Drawing.Size(306, 170);
             this.Controls.Add(this.textPertanyaan);
             this.Controls.Add(this.btnRecieve);
             this.Controls.Add(this.btnDonator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Tipe";
             this.Text = "Tipe";
             this.ResumeLayout(false);

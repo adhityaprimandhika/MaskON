@@ -27,7 +27,7 @@ namespace MaskON
         //button Recieve donation
         private void btnRecieve_Click(object sender, EventArgs e)
         {
-            new RecieveMask().Show();
+            new ReceiveMask().Show();
             this.Hide();
         }
     }
