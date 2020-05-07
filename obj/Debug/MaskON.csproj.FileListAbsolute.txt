@@ -1,0 +1,14 @@
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\bin\Debug\MaskON.exe.config
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\bin\Debug\MaskON.exe
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\bin\Debug\MaskON.pdb
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.Login.resources
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.boxRegister.resources
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.Properties.Resources.resources
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.exe
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.pdb
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.Tipe.resources
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.DonateMask.resources
+\\Mac\Home\Desktop\GitHub\MaskON\MaskON\obj\Debug\MaskON.RecieveMask.resources
