@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,98 +11,89 @@ using System.Windows.Forms;
 
 namespace MaskON
 {
-    public partial class boxRegister : Form
+    public partial class Register : Form
     {
-
-        public boxRegister()
+        Account account;
+        Datum datum;
+        private string gender = "";
+        private string tipeAkun = "";
+        public Register()
         {
             InitializeComponent();
         }
 
-        //button Back
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void RegisterAccount()
         {
-            new Login().Show();
-            this.Hide();
-        }
-
-        //button Register
-        private void buttonRegister_Click(object sender, EventArgs e)
-        {
-            if (textFullname.Text == "" || textPassword.Text == "" || textUsername.Text == "" || textEmail.Text == "" || textPhone.Text == "" || textGenderr.Text == "" || textNik.Text == "" || textLocation.Text == "" || textTypee.Text == "")
+            if (tb_Username.Text != "" && tb_Password.Text != "" && tb_Email.Text != "" && tb_Name.Text != "" && tb_Nik.Text != "" 
+                && tb_Phone.Text != "" && tb_Location.Text != "")
             {
-                MessageBox.Show("All box required to be filled.");
+                if (dropdown_Gender.SelectedItem.ToString() == "Male")
+                    gender = "Male";
+                else if (dropdown_Gender.SelectedItem.ToString() == "Female")
+                    gender = "Female";
+
+                if (dropdown_Type.SelectedItem.ToString() == "Donator")
+                    tipeAkun = "Donator";
+                else if (dropdown_Type.SelectedItem.ToString() == "Receiver")
+                    tipeAkun = "Receiver";
+
+                using (var db = new DBModel())
+                {
+                    account = new Account
+                    {
+                        Username = tb_Username.Text,
+                        Password = tb_Password.Text,
+                        Email = tb_Email.Text,
+                        Nama = tb_Name.Text,
+                        NIK = tb_Nik.Text,
+                        Lokasi = tb_Location.Text,
+                        Gender = gender,
+                        NoTelp = tb_Phone.Text,
+                        Tipe = tipeAkun
+                    };
+                    db.Accounts.Add(account);
+                    datum = new Datum
+                    {
+                        Lokasi = tb_Location.Text
+                    };
+                    db.Data.Add(datum);
+                    try
+                    {
+                        db.SaveChanges();
+                        MessageBox.Show("Account Created");
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                        {
+                            foreach (var validationError in entityValidationErrors.ValidationErrors)
+                            {
+                                MessageBox.Show("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                            }
+                        }
+                    }
+
+                }
             }
             else
             {
-                // databasenya dimasukin kesini
-                // sambungin database RegisterForm.cs ke Account.cs agar bisa dipakai Login.cs //
-                MessageBox.Show("Registrasi berhasil!");
-                new Login().Show();
-                this.Hide();
+                MessageBox.Show("Please fill your information correctly");
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // MOHON MAAF GA DIPAKAI TAPI JANGAN DI HAPUS //
-        private void Form1_Load(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-
+            Start start = new Start();
+            start.Show();
+            this.Hide();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_Register_Click(object sender, EventArgs e)
         {
-
+            RegisterAccount();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boxUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

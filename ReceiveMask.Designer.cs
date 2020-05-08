@@ -28,65 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtN95 = new System.Windows.Forms.Label();
-            this.boxSurgery = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.boxRequiredn95 = new System.Windows.Forms.TextBox();
-            this.boxRequiredsurgery = new System.Windows.Forms.TextBox();
-            this.boxN95 = new System.Windows.Forms.ListBox();
+            this.lb_N95 = new System.Windows.Forms.Label();
+            this.lb_Surgery = new System.Windows.Forms.Label();
+            this.btn_Submit = new System.Windows.Forms.Button();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.dtgView = new System.Windows.Forms.DataGridView();
+            this.tb_Lokasi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.boxDropoff = new System.Windows.Forms.ComboBox();
+            this.NUD_N95 = new System.Windows.Forms.NumericUpDown();
+            this.NUD_Surgery = new System.Windows.Forms.NumericUpDown();
+            this.btn_Receive_Refresh = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_N95)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Surgery)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtN95
-            // 
-            this.txtN95.AutoSize = true;
-            this.txtN95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtN95.Location = new System.Drawing.Point(26, 74);
-            this.txtN95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtN95.Name = "txtN95";
-            this.txtN95.Size = new System.Drawing.Size(101, 13);
-            this.txtN95.TabIndex = 0;
-            this.txtN95.Text = "Available N95 mask";
-            // 
-            // boxSurgery
-            // 
-            this.boxSurgery.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxSurgery.FormattingEnabled = true;
-            this.boxSurgery.Location = new System.Drawing.Point(159, 112);
-            this.boxSurgery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.boxSurgery.Name = "boxSurgery";
-            this.boxSurgery.Size = new System.Drawing.Size(86, 17);
-            this.boxSurgery.TabIndex = 2;
-            this.boxSurgery.SelectedIndexChanged += new System.EventHandler(this.boxSurgery_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 114);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Available Surgery mask";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 145);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(490, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "_____________________________________________________________________";
             // 
             // label4
             // 
@@ -97,147 +53,140 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 20);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Mask Reciever Section";
+            this.label4.Text = "Mask Receiver Section";
             // 
-            // boxRequiredn95
+            // lb_N95
             // 
-            this.boxRequiredn95.Location = new System.Drawing.Point(412, 76);
-            this.boxRequiredn95.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.boxRequiredn95.Name = "boxRequiredn95";
-            this.boxRequiredn95.Size = new System.Drawing.Size(52, 20);
-            this.boxRequiredn95.TabIndex = 12;
-            this.boxRequiredn95.TextChanged += new System.EventHandler(this.boxRequiredn95_TextChanged);
+            this.lb_N95.AutoSize = true;
+            this.lb_N95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_N95.Location = new System.Drawing.Point(288, 78);
+            this.lb_N95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_N95.Name = "lb_N95";
+            this.lb_N95.Size = new System.Drawing.Size(27, 13);
+            this.lb_N95.TabIndex = 18;
+            this.lb_N95.Text = "N95";
             // 
-            // boxRequiredsurgery
+            // lb_Surgery
             // 
-            this.boxRequiredsurgery.Location = new System.Drawing.Point(412, 114);
-            this.boxRequiredsurgery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.boxRequiredsurgery.Name = "boxRequiredsurgery";
-            this.boxRequiredsurgery.Size = new System.Drawing.Size(52, 20);
-            this.boxRequiredsurgery.TabIndex = 13;
-            this.boxRequiredsurgery.TextChanged += new System.EventHandler(this.boxRequiredsurgery_TextChanged);
+            this.lb_Surgery.AutoSize = true;
+            this.lb_Surgery.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Surgery.Location = new System.Drawing.Point(288, 116);
+            this.lb_Surgery.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_Surgery.Name = "lb_Surgery";
+            this.lb_Surgery.Size = new System.Drawing.Size(43, 13);
+            this.lb_Surgery.TabIndex = 19;
+            this.lb_Surgery.Text = "Surgery\r\n";
             // 
-            // boxN95
+            // btn_Submit
             // 
-            this.boxN95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxN95.FormattingEnabled = true;
-            this.boxN95.Location = new System.Drawing.Point(159, 74);
-            this.boxN95.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.boxN95.Name = "boxN95";
-            this.boxN95.Size = new System.Drawing.Size(86, 17);
-            this.boxN95.TabIndex = 17;
-            this.boxN95.SelectedIndexChanged += new System.EventHandler(this.boxN95_SelectedIndexChanged);
+            this.btn_Submit.Location = new System.Drawing.Point(275, 220);
+            this.btn_Submit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(80, 30);
+            this.btn_Submit.TabIndex = 20;
+            this.btn_Submit.Text = "Submit";
+            this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(382, 220);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(76, 30);
+            this.btn_Back.TabIndex = 21;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
+            // dtgView
+            // 
+            this.dtgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgView.Location = new System.Drawing.Point(12, 62);
+            this.dtgView.Name = "dtgView";
+            this.dtgView.Size = new System.Drawing.Size(240, 150);
+            this.dtgView.TabIndex = 22;
+            // 
+            // tb_Lokasi
+            // 
+            this.tb_Lokasi.Location = new System.Drawing.Point(358, 152);
+            this.tb_Lokasi.Name = "tb_Lokasi";
+            this.tb_Lokasi.Size = new System.Drawing.Size(100, 20);
+            this.tb_Lokasi.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 77);
+            this.label1.Location = new System.Drawing.Point(288, 155);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Spesific amount required :";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Lokasi";
             // 
-            // label5
+            // NUD_N95
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(272, 114);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Spesific amount required :";
+            this.NUD_N95.Location = new System.Drawing.Point(358, 78);
+            this.NUD_N95.Name = "NUD_N95";
+            this.NUD_N95.Size = new System.Drawing.Size(100, 20);
+            this.NUD_N95.TabIndex = 25;
             // 
-            // btnSubmit
+            // NUD_Surgery
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(260, 227);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(80, 30);
-            this.btnSubmit.TabIndex = 20;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.NUD_Surgery.Location = new System.Drawing.Point(358, 114);
+            this.NUD_Surgery.Name = "NUD_Surgery";
+            this.NUD_Surgery.Size = new System.Drawing.Size(100, 20);
+            this.NUD_Surgery.TabIndex = 26;
             // 
-            // btnBack
+            // btn_Receive_Refresh
             // 
-            this.btnBack.Location = new System.Drawing.Point(142, 227);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(76, 30);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(140, 187);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Drop off location :";
-            // 
-            // boxDropoff
-            // 
-            this.boxDropoff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxDropoff.FormattingEnabled = true;
-            this.boxDropoff.Items.AddRange(new object[] {
-            "Hospital",
-            "Local Mosque"});
-            this.boxDropoff.Location = new System.Drawing.Point(246, 186);
-            this.boxDropoff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.boxDropoff.Name = "boxDropoff";
-            this.boxDropoff.Size = new System.Drawing.Size(102, 21);
-            this.boxDropoff.TabIndex = 23;
-            this.boxDropoff.SelectedIndexChanged += new System.EventHandler(this.boxDropoff_SelectedIndexChanged);
+            this.btn_Receive_Refresh.Location = new System.Drawing.Point(89, 224);
+            this.btn_Receive_Refresh.Name = "btn_Receive_Refresh";
+            this.btn_Receive_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_Receive_Refresh.TabIndex = 27;
+            this.btn_Receive_Refresh.Text = "Refresh";
+            this.btn_Receive_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Receive_Refresh.Click += new System.EventHandler(this.btn_Receive_Refresh_Click);
             // 
             // ReceiveMask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 283);
-            this.Controls.Add(this.boxDropoff);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btn_Receive_Refresh);
+            this.Controls.Add(this.NUD_Surgery);
+            this.Controls.Add(this.NUD_N95);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.boxN95);
-            this.Controls.Add(this.boxRequiredsurgery);
-            this.Controls.Add(this.boxRequiredn95);
+            this.Controls.Add(this.tb_Lokasi);
+            this.Controls.Add(this.dtgView);
+            this.Controls.Add(this.btn_Back);
+            this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.lb_Surgery);
+            this.Controls.Add(this.lb_N95);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.boxSurgery);
-            this.Controls.Add(this.txtN95);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReceiveMask";
             this.Text = "ReceiveMask";
+            ((System.ComponentModel.ISupportInitialize)(this.dtgView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_N95)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_Surgery)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtN95;
-        private System.Windows.Forms.ListBox boxSurgery;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox boxRequiredn95;
-        private System.Windows.Forms.TextBox boxRequiredsurgery;
-        private System.Windows.Forms.ListBox boxN95;
+        private System.Windows.Forms.Label lb_N95;
+        private System.Windows.Forms.Label lb_Surgery;
+        private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.DataGridView dtgView;
+        private System.Windows.Forms.TextBox tb_Lokasi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox boxDropoff;
+        private System.Windows.Forms.NumericUpDown NUD_N95;
+        private System.Windows.Forms.NumericUpDown NUD_Surgery;
+        private System.Windows.Forms.Button btn_Receive_Refresh;
     }
 }

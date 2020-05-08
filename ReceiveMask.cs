@@ -17,58 +17,47 @@ namespace MaskON
             InitializeComponent();
         }
 
-        //button submit
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void UploadData()
         {
-            if (boxRequiredn95.Text == "" || boxRequiredsurgery.Text == "" || boxDropoff.Text == "")
+            Datum datum;
+            if (NUD_N95.Value != 0 && NUD_Surgery.Value != 0 && tb_Lokasi.Text != "")
             {
-                MessageBox.Show("Please fill all the boxes.");
+                int n95 = Convert.ToInt32(NUD_N95.Value);
+                int surgery = Convert.ToInt32(NUD_Surgery.Value);
+                using (var db = new DBModel())
+                {
+                    datum = new Datum
+                    {
+                        N95 = n95,
+                        Surgery = surgery,
+                        Lokasi = tb_Lokasi.Text
+                    };
+                    db.Data.Add(datum);
+                    db.SaveChanges();
+                    MessageBox.Show("Saved");
+                }
             }
-            else
-            {
-                //database reciever
-                new Ending().Show();
-                this.Hide();
-            }
+        }
+
+        //button submit
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            UploadData();
         }
 
         //button back
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-            new Tipe().Show();
-            this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
-        //menampilkan jumlah masker N95 yg ada di database
-        private void boxN95_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_Receive_Refresh_Click(object sender, EventArgs e)
         {
-
-        }
-
-        //menampilkan jumlah masker Surgery Mask yg ada di database
-        private void boxSurgery_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // bagian bawah ini ga perlu diisi sepertinya, tapi gabisa dihapus //
-
-        //bahan database untuk jumlah masker N95 yang dibutuhkan
-        private void boxRequiredn95_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //bahan database untuk jumlah masker Surgery yang dibutuhkan
-        private void boxRequiredsurgery_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //bahan database untuk lokasi pengambilan donasi
-        private void boxDropoff_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            DBModel db = new DBModel();
+            db.openConnection();
+            dtgView.DataSource = db.ReadData();
         }
     }
 }

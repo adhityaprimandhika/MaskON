@@ -1,4 +1,4 @@
-﻿namespace MaskON
+namespace MaskON
 {
     using System;
     using System.Collections.Generic;

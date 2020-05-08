@@ -1,6 +1,6 @@
 ﻿namespace MaskON
 {
-    partial class boxRegister
+    partial class Register
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.boxPassword = new System.Windows.Forms.TextBox();
-            this.boxUsername = new System.Windows.Forms.TextBox();
+            this.tb_Password = new System.Windows.Forms.TextBox();
+            this.tb_Username = new System.Windows.Forms.TextBox();
             this.textUsername = new System.Windows.Forms.Label();
             this.textPassword = new System.Windows.Forms.Label();
             this.textFullname = new System.Windows.Forms.Label();
@@ -39,36 +39,34 @@
             this.textNik = new System.Windows.Forms.Label();
             this.textLocation = new System.Windows.Forms.Label();
             this.textType = new System.Windows.Forms.Label();
-            this.boxName = new System.Windows.Forms.TextBox();
-            this.boxEmail = new System.Windows.Forms.TextBox();
-            this.boxPhone = new System.Windows.Forms.TextBox();
-            this.boxNik = new System.Windows.Forms.TextBox();
-            this.boxLocation = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.tb_Phone = new System.Windows.Forms.TextBox();
+            this.tb_Nik = new System.Windows.Forms.TextBox();
+            this.tb_Location = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.textGenderr = new System.Windows.Forms.ComboBox();
-            this.textTypee = new System.Windows.Forms.ComboBox();
-            this.buttonRegister = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.dropdown_Gender = new System.Windows.Forms.ComboBox();
+            this.dropdown_Type = new System.Windows.Forms.ComboBox();
+            this.btn_Register = new System.Windows.Forms.Button();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // boxPassword
+            // tb_Password
             // 
-            this.boxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.boxPassword.Location = new System.Drawing.Point(168, 91);
-            this.boxPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(102, 21);
-            this.boxPassword.TabIndex = 2;
-            this.boxPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tb_Password.Location = new System.Drawing.Point(168, 91);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.Size = new System.Drawing.Size(102, 21);
+            this.tb_Password.TabIndex = 2;
             // 
-            // boxUsername
+            // tb_Username
             // 
-            this.boxUsername.Location = new System.Drawing.Point(168, 60);
-            this.boxUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.boxUsername.Name = "boxUsername";
-            this.boxUsername.Size = new System.Drawing.Size(102, 20);
-            this.boxUsername.TabIndex = 3;
-            this.boxUsername.TextChanged += new System.EventHandler(this.boxUsername_TextChanged);
+            this.tb_Username.Location = new System.Drawing.Point(168, 60);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Username.Name = "tb_Username";
+            this.tb_Username.Size = new System.Drawing.Size(102, 20);
+            this.tb_Username.TabIndex = 3;
             // 
             // textUsername
             // 
@@ -99,7 +97,6 @@
             this.textFullname.Size = new System.Drawing.Size(52, 13);
             this.textFullname.TabIndex = 6;
             this.textFullname.Text = "Full name";
-            this.textFullname.Click += new System.EventHandler(this.label1_Click);
             // 
             // textEmail
             // 
@@ -162,45 +159,45 @@
             this.textType.TabIndex = 12;
             this.textType.Text = "Account Type";
             // 
-            // boxName
+            // tb_Name
             // 
-            this.boxName.Location = new System.Drawing.Point(168, 122);
-            this.boxName.Margin = new System.Windows.Forms.Padding(2);
-            this.boxName.Name = "boxName";
-            this.boxName.Size = new System.Drawing.Size(102, 20);
-            this.boxName.TabIndex = 13;
+            this.tb_Name.Location = new System.Drawing.Point(168, 122);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(102, 20);
+            this.tb_Name.TabIndex = 13;
             // 
-            // boxEmail
+            // tb_Email
             // 
-            this.boxEmail.Location = new System.Drawing.Point(168, 153);
-            this.boxEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.boxEmail.Name = "boxEmail";
-            this.boxEmail.Size = new System.Drawing.Size(102, 20);
-            this.boxEmail.TabIndex = 14;
+            this.tb_Email.Location = new System.Drawing.Point(168, 153);
+            this.tb_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(102, 20);
+            this.tb_Email.TabIndex = 14;
             // 
-            // boxPhone
+            // tb_Phone
             // 
-            this.boxPhone.Location = new System.Drawing.Point(168, 185);
-            this.boxPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.boxPhone.Name = "boxPhone";
-            this.boxPhone.Size = new System.Drawing.Size(102, 20);
-            this.boxPhone.TabIndex = 15;
+            this.tb_Phone.Location = new System.Drawing.Point(168, 185);
+            this.tb_Phone.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Phone.Name = "tb_Phone";
+            this.tb_Phone.Size = new System.Drawing.Size(102, 20);
+            this.tb_Phone.TabIndex = 15;
             // 
-            // boxNik
+            // tb_Nik
             // 
-            this.boxNik.Location = new System.Drawing.Point(168, 247);
-            this.boxNik.Margin = new System.Windows.Forms.Padding(2);
-            this.boxNik.Name = "boxNik";
-            this.boxNik.Size = new System.Drawing.Size(102, 20);
-            this.boxNik.TabIndex = 17;
+            this.tb_Nik.Location = new System.Drawing.Point(168, 247);
+            this.tb_Nik.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Nik.Name = "tb_Nik";
+            this.tb_Nik.Size = new System.Drawing.Size(102, 20);
+            this.tb_Nik.TabIndex = 17;
             // 
-            // boxLocation
+            // tb_Location
             // 
-            this.boxLocation.Location = new System.Drawing.Point(168, 278);
-            this.boxLocation.Margin = new System.Windows.Forms.Padding(2);
-            this.boxLocation.Name = "boxLocation";
-            this.boxLocation.Size = new System.Drawing.Size(102, 20);
-            this.boxLocation.TabIndex = 18;
+            this.tb_Location.Location = new System.Drawing.Point(168, 278);
+            this.tb_Location.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Location.Name = "tb_Location";
+            this.tb_Location.Size = new System.Drawing.Size(102, 20);
+            this.tb_Location.TabIndex = 18;
             // 
             // title
             // 
@@ -213,67 +210,67 @@
             this.title.TabIndex = 20;
             this.title.Text = "Register";
             // 
-            // textGenderr
+            // dropdown_Gender
             // 
-            this.textGenderr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.textGenderr.FormattingEnabled = true;
-            this.textGenderr.Items.AddRange(new object[] {
+            this.dropdown_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdown_Gender.FormattingEnabled = true;
+            this.dropdown_Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.textGenderr.Location = new System.Drawing.Point(168, 216);
-            this.textGenderr.Margin = new System.Windows.Forms.Padding(2);
-            this.textGenderr.Name = "textGenderr";
-            this.textGenderr.Size = new System.Drawing.Size(102, 21);
-            this.textGenderr.TabIndex = 21;
+            this.dropdown_Gender.Location = new System.Drawing.Point(168, 216);
+            this.dropdown_Gender.Margin = new System.Windows.Forms.Padding(2);
+            this.dropdown_Gender.Name = "dropdown_Gender";
+            this.dropdown_Gender.Size = new System.Drawing.Size(102, 21);
+            this.dropdown_Gender.TabIndex = 21;
             // 
-            // textTypee
+            // dropdown_Type
             // 
-            this.textTypee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.textTypee.FormattingEnabled = true;
-            this.textTypee.Items.AddRange(new object[] {
+            this.dropdown_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdown_Type.FormattingEnabled = true;
+            this.dropdown_Type.Items.AddRange(new object[] {
             "Donator",
-            "Reciever"});
-            this.textTypee.Location = new System.Drawing.Point(168, 309);
-            this.textTypee.Margin = new System.Windows.Forms.Padding(2);
-            this.textTypee.Name = "textTypee";
-            this.textTypee.Size = new System.Drawing.Size(102, 21);
-            this.textTypee.TabIndex = 22;
+            "Receiver"});
+            this.dropdown_Type.Location = new System.Drawing.Point(168, 309);
+            this.dropdown_Type.Margin = new System.Windows.Forms.Padding(2);
+            this.dropdown_Type.Name = "dropdown_Type";
+            this.dropdown_Type.Size = new System.Drawing.Size(102, 21);
+            this.dropdown_Type.TabIndex = 22;
             // 
-            // buttonRegister
+            // btn_Register
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(209, 345);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(54, 32);
-            this.buttonRegister.TabIndex = 23;
-            this.buttonRegister.Text = "Register";
-            this.buttonRegister.UseVisualStyleBackColor = true;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.btn_Register.Location = new System.Drawing.Point(209, 345);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(54, 32);
+            this.btn_Register.TabIndex = 23;
+            this.btn_Register.Text = "Register";
+            this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
-            // buttonBack
+            // btn_Back
             // 
-            this.buttonBack.Location = new System.Drawing.Point(87, 345);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(54, 32);
-            this.buttonBack.TabIndex = 24;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.btn_Back.Location = new System.Drawing.Point(87, 345);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(54, 32);
+            this.btn_Back.TabIndex = 24;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // boxRegister
+            // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 394);
-            this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.textTypee);
-            this.Controls.Add(this.textGenderr);
+            this.Controls.Add(this.btn_Back);
+            this.Controls.Add(this.btn_Register);
+            this.Controls.Add(this.dropdown_Type);
+            this.Controls.Add(this.dropdown_Gender);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.boxLocation);
-            this.Controls.Add(this.boxNik);
-            this.Controls.Add(this.boxPhone);
-            this.Controls.Add(this.boxEmail);
-            this.Controls.Add(this.boxName);
+            this.Controls.Add(this.tb_Location);
+            this.Controls.Add(this.tb_Nik);
+            this.Controls.Add(this.tb_Phone);
+            this.Controls.Add(this.tb_Email);
+            this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.textType);
             this.Controls.Add(this.textLocation);
             this.Controls.Add(this.textNik);
@@ -283,20 +280,19 @@
             this.Controls.Add(this.textFullname);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUsername);
-            this.Controls.Add(this.boxUsername);
-            this.Controls.Add(this.boxPassword);
+            this.Controls.Add(this.tb_Username);
+            this.Controls.Add(this.tb_Password);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "boxRegister";
+            this.Name = "Register";
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox boxPassword;
-        private System.Windows.Forms.TextBox boxUsername;
+        private System.Windows.Forms.TextBox tb_Password;
+        private System.Windows.Forms.TextBox tb_Username;
         private System.Windows.Forms.Label textUsername;
         private System.Windows.Forms.Label textPassword;
         private System.Windows.Forms.Label textFullname;
@@ -306,16 +302,16 @@
         private System.Windows.Forms.Label textNik;
         private System.Windows.Forms.Label textLocation;
         private System.Windows.Forms.Label textType;
-        private System.Windows.Forms.TextBox boxName;
-        private System.Windows.Forms.TextBox boxEmail;
-        private System.Windows.Forms.TextBox boxPhone;
-        private System.Windows.Forms.TextBox boxNik;
-        private System.Windows.Forms.TextBox boxLocation;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.TextBox tb_Email;
+        private System.Windows.Forms.TextBox tb_Phone;
+        private System.Windows.Forms.TextBox tb_Nik;
+        private System.Windows.Forms.TextBox tb_Location;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.ComboBox textGenderr;
-        private System.Windows.Forms.ComboBox textTypee;
-        private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.ComboBox dropdown_Gender;
+        private System.Windows.Forms.ComboBox dropdown_Type;
+        private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.Button btn_Back;
     }
 }
 

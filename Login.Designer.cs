@@ -29,98 +29,120 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.textUsername = new System.Windows.Forms.Label();
-            this.boxUsername = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.Label();
-            this.boxPassword = new System.Windows.Forms.TextBox();
+            this.btn_Login = new System.Windows.Forms.Button();
+            this.btn_Login_Register = new System.Windows.Forms.Button();
+            this.lb_Username = new System.Windows.Forms.Label();
+            this.tb_Login_Username = new System.Windows.Forms.TextBox();
+            this.lb_Password = new System.Windows.Forms.Label();
+            this.tb_Login_Password = new System.Windows.Forms.TextBox();
+            this.rb_Penerima = new System.Windows.Forms.RadioButton();
+            this.rb_Donatur = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(227, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(114, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 42);
+            this.label1.Size = new System.Drawing.Size(80, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "MaskON";
             // 
-            // btnLogin
+            // btn_Login
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(234, 275);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 63);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.Location = new System.Drawing.Point(118, 164);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(75, 33);
+            this.btn_Login.TabIndex = 1;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // btnRegister
+            // btn_Login_Register
             // 
-            this.btnRegister.Location = new System.Drawing.Point(190, 364);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(6);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(230, 44);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "Create new account";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btn_Login_Register.Location = new System.Drawing.Point(93, 203);
+            this.btn_Login_Register.Name = "btn_Login_Register";
+            this.btn_Login_Register.Size = new System.Drawing.Size(115, 23);
+            this.btn_Login_Register.TabIndex = 2;
+            this.btn_Login_Register.Text = "Create new account";
+            this.btn_Login_Register.UseVisualStyleBackColor = true;
+            this.btn_Login_Register.Click += new System.EventHandler(this.btn_Login_Register_Click);
             // 
-            // textUsername
+            // lb_Username
             // 
-            this.textUsername.AutoSize = true;
-            this.textUsername.Location = new System.Drawing.Point(118, 130);
-            this.textUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(110, 25);
-            this.textUsername.TabIndex = 5;
-            this.textUsername.Text = "Username";
+            this.lb_Username.AutoSize = true;
+            this.lb_Username.Location = new System.Drawing.Point(59, 68);
+            this.lb_Username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_Username.Name = "lb_Username";
+            this.lb_Username.Size = new System.Drawing.Size(55, 13);
+            this.lb_Username.TabIndex = 5;
+            this.lb_Username.Text = "Username";
             // 
-            // boxUsername
+            // tb_Login_Username
             // 
-            this.boxUsername.Location = new System.Drawing.Point(306, 127);
-            this.boxUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.boxUsername.Name = "boxUsername";
-            this.boxUsername.Size = new System.Drawing.Size(200, 31);
-            this.boxUsername.TabIndex = 6;
+            this.tb_Login_Username.Location = new System.Drawing.Point(153, 66);
+            this.tb_Login_Username.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Login_Username.Name = "tb_Login_Username";
+            this.tb_Login_Username.Size = new System.Drawing.Size(102, 20);
+            this.tb_Login_Username.TabIndex = 6;
             // 
-            // textPassword
+            // lb_Password
             // 
-            this.textPassword.AutoSize = true;
-            this.textPassword.Location = new System.Drawing.Point(118, 196);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(106, 25);
-            this.textPassword.TabIndex = 7;
-            this.textPassword.Text = "Password";
+            this.lb_Password.AutoSize = true;
+            this.lb_Password.Location = new System.Drawing.Point(59, 102);
+            this.lb_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_Password.Name = "lb_Password";
+            this.lb_Password.Size = new System.Drawing.Size(53, 13);
+            this.lb_Password.TabIndex = 7;
+            this.lb_Password.Text = "Password";
             // 
-            // boxPassword
+            // tb_Login_Password
             // 
-            this.boxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.boxPassword.Location = new System.Drawing.Point(306, 190);
-            this.boxPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(200, 35);
-            this.boxPassword.TabIndex = 8;
+            this.tb_Login_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tb_Login_Password.Location = new System.Drawing.Point(153, 99);
+            this.tb_Login_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Login_Password.Name = "tb_Login_Password";
+            this.tb_Login_Password.Size = new System.Drawing.Size(102, 21);
+            this.tb_Login_Password.TabIndex = 8;
+            // 
+            // rb_Penerima
+            // 
+            this.rb_Penerima.AutoSize = true;
+            this.rb_Penerima.Location = new System.Drawing.Point(186, 125);
+            this.rb_Penerima.Name = "rb_Penerima";
+            this.rb_Penerima.Size = new System.Drawing.Size(69, 17);
+            this.rb_Penerima.TabIndex = 28;
+            this.rb_Penerima.TabStop = true;
+            this.rb_Penerima.Text = "Penerima";
+            this.rb_Penerima.UseVisualStyleBackColor = true;
+            // 
+            // rb_Donatur
+            // 
+            this.rb_Donatur.AutoSize = true;
+            this.rb_Donatur.Location = new System.Drawing.Point(105, 125);
+            this.rb_Donatur.Name = "rb_Donatur";
+            this.rb_Donatur.Size = new System.Drawing.Size(63, 17);
+            this.rb_Donatur.TabIndex = 27;
+            this.rb_Donatur.TabStop = true;
+            this.rb_Donatur.Text = "Donatur";
+            this.rb_Donatur.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 458);
-            this.Controls.Add(this.boxPassword);
-            this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.boxUsername);
-            this.Controls.Add(this.textUsername);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
+            this.ClientSize = new System.Drawing.Size(311, 238);
+            this.Controls.Add(this.rb_Penerima);
+            this.Controls.Add(this.rb_Donatur);
+            this.Controls.Add(this.tb_Login_Password);
+            this.Controls.Add(this.lb_Password);
+            this.Controls.Add(this.tb_Login_Username);
+            this.Controls.Add(this.lb_Username);
+            this.Controls.Add(this.btn_Login_Register);
+            this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -131,11 +153,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label textUsername;
-        private System.Windows.Forms.TextBox boxUsername;
-        private System.Windows.Forms.Label textPassword;
-        private System.Windows.Forms.TextBox boxPassword;
+        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Button btn_Login_Register;
+        private System.Windows.Forms.Label lb_Username;
+        private System.Windows.Forms.TextBox tb_Login_Username;
+        private System.Windows.Forms.Label lb_Password;
+        private System.Windows.Forms.TextBox tb_Login_Password;
+        private System.Windows.Forms.RadioButton rb_Penerima;
+        private System.Windows.Forms.RadioButton rb_Donatur;
     }
 }

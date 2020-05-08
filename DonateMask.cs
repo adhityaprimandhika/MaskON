@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,54 +13,51 @@ namespace MaskON
 {
     public partial class DonateMask : Form
     {
+        private int n95;
+        private int surgery;
         public DonateMask()
         {
             InitializeComponent();
         }
 
         //button Submit
-        private void btnSubmit_Click(object sender, EventArgs e)
-            // database Donator
+        private void btn_Submit_Click(object sender, EventArgs e)
         {
-            if (boxMask.Text == "" || textJumlah.Text == "" || boxDropoff.Text == "")
-            {
-                MessageBox.Show("Please fill all the boxes.");
-            }
-            else
-            {
-                //database reciever
-                new Ending().Show();
-                this.Hide();
-            }
+            UpdateData();
+            MessageBox.Show("Donate Succeed");
         }
 
         //button Back
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-            new Tipe().Show();
-            this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
-        // bagian bawah ini ga perlu diisi sepertinya, tapi gabisa dihapus //
-
-        //bahan database untuk jenis donasi masker
-        private void boxMask_SelectedIndexChanged(object sender, EventArgs e)
+        //button refresh
+        private void btn_Refresh_Click(object sender, EventArgs e)
         {
-
+            DBModel db = new DBModel();
+            db.openConnection();
+            dtgView.DataSource = db.ReadData();
         }
 
-        //bahan database untuk jumlah donasi masker
-        private void textJumlah_TextChanged(object sender, EventArgs e)
+        private void DonateMask_Load(object sender, EventArgs e)
         {
-
+            DBModel db = new DBModel();
+            db.openConnection();
+            dtgView.DataSource = db.ReadData();
         }
 
-        //bahan database untuk lokasi pemberian donasi
-        private void boxDropoff_SelectedIndexChanged(object sender, EventArgs e)
+        private void UpdateData()
         {
-
+            DBModel db = new DBModel();
+            db.openConnection();
+            n95 = Convert.ToInt32(NUD_N95.Value);
+            surgery = Convert.ToInt32(NUD_Surgery.Value); 
+            db.UpdateN95(n95, tb_Lokasi.Text);
+            db.UpdateSurgery(surgery, tb_Lokasi.Text);
         }
-
-
     }
 }
