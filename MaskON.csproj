@@ -80,11 +80,17 @@
     <Compile Include="DonateMask.Designer.cs">
       <DependentUpon>DonateMask.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ending.cs">
+    <Compile Include="EndingDonate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ending.Designer.cs">
-      <DependentUpon>Ending.cs</DependentUpon>
+    <Compile Include="EndingDonate.Designer.cs">
+      <DependentUpon>EndingDonate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndingReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndingReceive.Designer.cs">
+      <DependentUpon>EndingReceive.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -112,7 +118,6 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Table.cs" />
     <Compile Include="Tipe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +126,12 @@
     </Compile>
     <EmbeddedResource Include="DonateMask.resx">
       <DependentUpon>DonateMask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndingDonate.resx">
+      <DependentUpon>EndingDonate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndingReceive.resx">
+      <DependentUpon>EndingReceive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

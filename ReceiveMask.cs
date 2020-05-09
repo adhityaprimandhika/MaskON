@@ -43,6 +43,9 @@ namespace MaskON
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             UploadData();
+            EndingReceive ending = new EndingReceive();
+            ending.Show();
+            this.Close();
         }
 
         //button back
@@ -54,6 +57,13 @@ namespace MaskON
         }
 
         private void btn_Receive_Refresh_Click(object sender, EventArgs e)
+        {
+            DBModel db = new DBModel();
+            db.openConnection();
+            dtgView.DataSource = db.ReadData();
+        }
+
+        private void ReceiveMask_Load(object sender, EventArgs e)
         {
             DBModel db = new DBModel();
             db.openConnection();

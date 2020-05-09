@@ -19,8 +19,8 @@ namespace MaskON
 
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            Tipe tipe = new Tipe();
+            tipe.Show();
             this.Hide();
         }
     }

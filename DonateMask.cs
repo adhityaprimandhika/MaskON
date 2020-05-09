@@ -25,6 +25,9 @@ namespace MaskON
         {
             UpdateData();
             MessageBox.Show("Donate Succeed");
+            EndingDonate ending = new EndingDonate();
+            ending.Show();
+            this.Close();
         }
 
         //button Back

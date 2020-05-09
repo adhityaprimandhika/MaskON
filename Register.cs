@@ -52,11 +52,6 @@ namespace MaskON
                         Tipe = tipeAkun
                     };
                     db.Accounts.Add(account);
-                    datum = new Datum
-                    {
-                        Lokasi = tb_Location.Text
-                    };
-                    db.Data.Add(datum);
                     try
                     {
                         db.SaveChanges();

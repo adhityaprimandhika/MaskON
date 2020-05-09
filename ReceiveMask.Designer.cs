@@ -168,6 +168,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReceiveMask";
             this.Text = "ReceiveMask";
+            this.Load += new System.EventHandler(this.ReceiveMask_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_N95)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Surgery)).EndInit();

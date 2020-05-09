@@ -20,15 +20,17 @@ namespace MaskON
         //button Be a Donator
         private void btnDonator_Click(object sender, EventArgs e)
         {
-            new DonateMask().Show();
-            this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
 
         //button Receive donation
         private void btnRecieve_Click(object sender, EventArgs e)
         {
-            new ReceiveMask().Show();
-            this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

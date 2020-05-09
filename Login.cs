@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms.VisualStyles;
 
 namespace MaskON
 {
@@ -34,6 +35,34 @@ namespace MaskON
             }
         }
 
+        private bool CheckDonate(string username)
+        {
+            DBModel db = new DBModel();
+            var query = from Account in db.Accounts where Account.Username == username && Account.Tipe == "Donator" select Account;
+            if (query.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool CheckReceive(string username)
+        {
+            DBModel db = new DBModel();
+            var query = from Account in db.Accounts where Account.Username == username && Account.Tipe == "Receiver" select Account;
+            if (query.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         //button register
         private void btn_Login_Register_Click(object sender, EventArgs e)
         {
@@ -49,19 +78,24 @@ namespace MaskON
             {
                 if (ValidateUser(tb_Login_Username.Text, tb_Login_Password.Text))
                 {
-                    if (rb_Donatur.Checked)
+                    if (CheckDonate(tb_Login_Username.Text))
                     {
                         DonateMask donate = new DonateMask();
-                        MessageBox.Show("Login Succeed");
                         donate.Show();
                         this.Close();
                     }
-                    else if (rb_Penerima.Checked)
+                    else if (!CheckDonate(tb_Login_Username.Text))
                     {
-                        ReceiveMask receive = new ReceiveMask();
-                        MessageBox.Show("Login Succeed");
-                        receive.Show();
-                        this.Close();
+                        if (CheckReceive(tb_Login_Username.Text))
+                        {
+                            ReceiveMask receive = new ReceiveMask();
+                            receive.Show();
+                            this.Close();
+                        }
+                        else if (!CheckReceive(tb_Login_Username.Text))
+                        {
+                            MessageBox.Show("Incorrect Login");
+                        }
                     }
                 }
                 else

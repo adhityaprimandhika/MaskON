@@ -35,8 +35,6 @@
             this.tb_Login_Username = new System.Windows.Forms.TextBox();
             this.lb_Password = new System.Windows.Forms.Label();
             this.tb_Login_Password = new System.Windows.Forms.TextBox();
-            this.rb_Penerima = new System.Windows.Forms.RadioButton();
-            this.rb_Donatur = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +50,7 @@
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(118, 164);
+            this.btn_Login.Location = new System.Drawing.Point(118, 146);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 33);
             this.btn_Login.TabIndex = 1;
@@ -62,7 +60,7 @@
             // 
             // btn_Login_Register
             // 
-            this.btn_Login_Register.Location = new System.Drawing.Point(93, 203);
+            this.btn_Login_Register.Location = new System.Drawing.Point(98, 194);
             this.btn_Login_Register.Name = "btn_Login_Register";
             this.btn_Login_Register.Size = new System.Drawing.Size(115, 23);
             this.btn_Login_Register.TabIndex = 2;
@@ -107,35 +105,11 @@
             this.tb_Login_Password.Size = new System.Drawing.Size(102, 21);
             this.tb_Login_Password.TabIndex = 8;
             // 
-            // rb_Penerima
-            // 
-            this.rb_Penerima.AutoSize = true;
-            this.rb_Penerima.Location = new System.Drawing.Point(186, 125);
-            this.rb_Penerima.Name = "rb_Penerima";
-            this.rb_Penerima.Size = new System.Drawing.Size(69, 17);
-            this.rb_Penerima.TabIndex = 28;
-            this.rb_Penerima.TabStop = true;
-            this.rb_Penerima.Text = "Penerima";
-            this.rb_Penerima.UseVisualStyleBackColor = true;
-            // 
-            // rb_Donatur
-            // 
-            this.rb_Donatur.AutoSize = true;
-            this.rb_Donatur.Location = new System.Drawing.Point(105, 125);
-            this.rb_Donatur.Name = "rb_Donatur";
-            this.rb_Donatur.Size = new System.Drawing.Size(63, 17);
-            this.rb_Donatur.TabIndex = 27;
-            this.rb_Donatur.TabStop = true;
-            this.rb_Donatur.Text = "Donatur";
-            this.rb_Donatur.UseVisualStyleBackColor = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 238);
-            this.Controls.Add(this.rb_Penerima);
-            this.Controls.Add(this.rb_Donatur);
             this.Controls.Add(this.tb_Login_Password);
             this.Controls.Add(this.lb_Password);
             this.Controls.Add(this.tb_Login_Username);
@@ -159,7 +133,5 @@
         private System.Windows.Forms.TextBox tb_Login_Username;
         private System.Windows.Forms.Label lb_Password;
         private System.Windows.Forms.TextBox tb_Login_Password;
-        private System.Windows.Forms.RadioButton rb_Penerima;
-        private System.Windows.Forms.RadioButton rb_Donatur;
     }
 }
