@@ -20,7 +20,7 @@ namespace MaskON
         private void UploadData()
         {
             Datum datum;
-            if (NUD_N95.Value != 0 && NUD_Surgery.Value != 0 && tb_Lokasi.Text != "")
+            if (NUD_N95.Value != 0 || NUD_Surgery.Value != 0 && tb_Lokasi.Text != "")
             {
                 int n95 = Convert.ToInt32(NUD_N95.Value);
                 int surgery = Convert.ToInt32(NUD_Surgery.Value);

@@ -6,6 +6,7 @@ namespace MaskON
     using System.Linq;
     using System.Data.SqlClient;
     using System.Data;
+    using System.Windows.Forms;
 
     public partial class DBModel : DbContext
     {
@@ -22,9 +23,12 @@ namespace MaskON
         }
 
         SqlConnection connection = new SqlConnection(@"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\MaskOn_Database.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
-        private string data = "";
-        private int sum;
-        private int total;
+        private string data1 = "";
+        private string data2= "";
+        private int sum1;
+        private int sum2;
+        private int total1;
+        private int total2;
         public void openConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
@@ -64,13 +68,13 @@ namespace MaskON
             {
                 while (reader.Read())
                 {
-                    data = reader["N95"].ToString();
+                    data1 = reader["N95"].ToString();
                 }
             }
-            sum = Convert.ToInt32(data);
-            total = sum - donate;
+            sum1 = Convert.ToInt32(data1);
+            total1 = sum1 - donate;
             SqlCommand update = new SqlCommand("UPDATE Data SET N95 = @jumlah WHERE Lokasi=@lokasi", connection);
-            update.Parameters.Add("@jumlah", SqlDbType.Int).Value = total;
+            update.Parameters.Add("@jumlah", SqlDbType.Int).Value = total1;
             update.Parameters.Add("@lokasi", SqlDbType.NVarChar).Value = lokasi;
             openConnection();
             update.ExecuteNonQuery();
@@ -86,13 +90,13 @@ namespace MaskON
             {
                 while (reader.Read())
                 {
-                    data = reader["Surgery"].ToString();
+                    data2 = reader["Surgery"].ToString();
                 }
             }
-            sum = Convert.ToInt32(data);
-            total = sum - donate;
+            sum2 = Convert.ToInt32(data2);
+            total2 = sum2 - donate;
             SqlCommand update = new SqlCommand("UPDATE Data SET Surgery = @jumlah WHERE Lokasi=@lokasi", connection);
-            update.Parameters.Add("@jumlah", SqlDbType.Int).Value = total;
+            update.Parameters.Add("@jumlah", SqlDbType.Int).Value = total2;
             update.Parameters.Add("@lokasi", SqlDbType.NVarChar).Value = lokasi;
             openConnection();
             update.ExecuteNonQuery();

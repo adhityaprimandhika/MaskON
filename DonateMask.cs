@@ -24,10 +24,6 @@ namespace MaskON
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             UpdateData();
-            MessageBox.Show("Donate Succeed");
-            EndingDonate ending = new EndingDonate();
-            ending.Show();
-            this.Close();
         }
 
         //button Back
@@ -58,9 +54,19 @@ namespace MaskON
             DBModel db = new DBModel();
             db.openConnection();
             n95 = Convert.ToInt32(NUD_N95.Value);
-            surgery = Convert.ToInt32(NUD_Surgery.Value); 
+            surgery = Convert.ToInt32(NUD_Surgery.Value);
             db.UpdateN95(n95, tb_Lokasi.Text);
             db.UpdateSurgery(surgery, tb_Lokasi.Text);
+            if (tb_Lokasi.Text != "")
+            {
+                EndingDonate ending = new EndingDonate();
+                ending.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tolong isi data dengan benar");
+            }
         }
     }
 }

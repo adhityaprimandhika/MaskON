@@ -14,7 +14,6 @@ namespace MaskON
     public partial class Register : Form
     {
         Account account;
-        Datum datum;
         private string gender = "";
         private string tipeAkun = "";
         public Register()
